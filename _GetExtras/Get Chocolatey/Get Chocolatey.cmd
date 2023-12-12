@@ -4,7 +4,18 @@ pushd "%~dp0"
 set mySN=%~n0
 setlocal enableextensions disabledelayedexpansion
 
+:: ALL scripts must start with "GET " text
+::################################################################################################# Config variable for checking if Extra is installed
+set "checkEXTRA=C:\ProgramData\chocolatey\choco.exe"
+::#################################################################################################
+set xDESCEXTRA=Chocolatey is a machine-level, command-line package manager and installer for software on Microsoft Windows. It uses the NuGet packaging infrastructure and Windows PowerShell to simplify the process of downloading and installing software.
+::#################################################################################################
+
+if "_%1"=="_/GETEXTRA" goto getExtra
+goto addEntry
+
 ::================================================================================================= Check for permissions
+:getAdminPriv
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
 REM --> If error flag set, we do not have admin.
@@ -25,39 +36,33 @@ if '%errorlevel%' NEQ '0' (
 ::================================================================================================= end checking admin
 
 :gotAdmin
+exit /b
 
-:: ALL scripts must start with "GET " text
-::################################################################################################# Config variable for checking if Extra is installed
-set "checkEXTRA=C:\ProgramData\chocolatey\choco.exe"
-::#################################################################################################
-set xDESCEXTRA=Chocolatey is a machine-level, command-line package manager and installer for software on Microsoft Windows. It uses the NuGet packaging infrastructure and Windows PowerShell to simplify the process of downloading and installing software.
-::#################################################################################################
-
-if "_%1"=="_/GETEXTRA" goto getExtra
-::if "_%1"=="/ADDENTRY" goto addEntry
-::goto endScript
+:addEntry
 ::================================================================================================= Check if EXTRA exist
 if exist "%checkEXTRA%" goto removeEntry
-
 ::------------------------------------------------------------------------------------------------- Add Entry if not exist
-:addEntry
+echo addEntry
 set myP=%~dp0
 set myP=%myP:~0,-1%
 set "myICO=C:\DNXSoftware\Extras\_GetExtras\DNXEXTRAS.ico"
 if exist "%~dpn0.ico" set "myICO=%~dpn0.ico"
 call ..\createlnk.cmd "%~dpnx0" "%myP%" "%mySN%" "/GETEXTRA" "%myICO%"
-echo "%~dpn0.lnk"
 if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\" mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\"
-move /Y "%~dpn0.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\"
+move /Y "%~dpn0\%~n0.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\" >nul
 goto endScript
 
 ::------------------------------------------------------------------------------------------------- Remove Entry if exist
 :removeEntry
-del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\%mySN%.lnk"
+echo removeEntry
+del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\%mySN%.lnk" >nul
 goto endScript
 
 ::================================================================================================= Start Main Script for Get EXTRA
 :getExtra
+echo getExtra
+call :getAdminPriv
+
 cls
 echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
