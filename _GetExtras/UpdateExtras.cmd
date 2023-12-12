@@ -13,6 +13,7 @@ if "%1_"=="/ENDUPDATE" goto StartProcess
 ::There is no parametres, then download and unpack file.
 :downloadAndUnpack
 ::wget -O %temp%\UpdateExtras.cmd "https://raw.githubusercontent.com/Deen0X/DNXWIN/main/_GetExtras/UpdateExtras.cmd"
+rmdir /S /Q %Temp%\DNXWin-main
 wget -O %myZIP% https://github.com/Deen0X/DNXWIN/archive/refs/heads/main.zip
 cd %temp%
 7z x -y %myZIP% * %Temp%
