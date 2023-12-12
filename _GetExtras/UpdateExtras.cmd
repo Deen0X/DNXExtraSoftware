@@ -7,7 +7,7 @@ cd "%myPath%"
 set myF=C:\DNXSoftware\Extras\_GetExtras\
 set myZIP=%TEMP%\DNXWIN.zip
 
-goto StartProcess
+::goto StartProcess
 
 if "_%1"=="_/UPDATE" goto updateMe
 if "_%1"=="_/ENDUPDATE" goto StartProcess
