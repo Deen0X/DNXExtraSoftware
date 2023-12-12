@@ -1,9 +1,11 @@
 @echo off
 %~d0
-cd "%~dp0"
-
+set myPath=%~dp0
+cd "%myPath%"
 set myF=C:\DNXSoftware\Extras\_GetExtras\
 set myZIP=%TEMP%\DNXWIN.zip
+
+goto StartProcess
 
 if "_%1"=="_/UPDATE" goto updateMe
 if "_%1"=="_/ENDUPDATE" goto StartProcess
@@ -30,8 +32,18 @@ ren UpdateExtras.cmd "_Check for Updated Extras.cmd" >nul
 goto endScript
 
 :StartProcess
-echo Now, this script must navigate into all directories and run each subscript, for adding new options to _Get Extras menu.
-pause
+
+::for /D %%G in ("C:\DNXSoftware\Extras\_GetExtras*") do :CheckFolder "%%G"
+FOR /D %%G in (%myF%*) do call :checkFolder "%%G"
+goto endScript
+
+:checkFolder
+set "mySubS=%~n1"
+set "mySubPath=%~1"
+echo Checking %mySubS%
+call "%mySubPath%\%mySubS%.cmd"
+exit /b
+
 
 :endScript
-
+pause
