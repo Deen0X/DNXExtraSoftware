@@ -55,7 +55,7 @@ goto endScript
 ::------------------------------------------------------------------------------------------------- Remove Entry if exist
 :removeEntry
 echo removeEntry
-del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\%mySN%.lnk" >nul
+if exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\%mySN%.lnk" del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\%mySN%.lnk" >nul
 goto endScript
 
 ::================================================================================================= Start Main Script for Get EXTRA
