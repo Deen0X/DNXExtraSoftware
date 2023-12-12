@@ -1,4 +1,6 @@
 @echo off
+::Script created by:Deen0X
+::part of DNXWIN Project
 %~d0
 set myPath=%~dp0
 cd "%myPath%"
