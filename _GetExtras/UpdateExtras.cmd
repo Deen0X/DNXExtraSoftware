@@ -7,8 +7,10 @@ set myZIP=%TEMP%\DNXWIN.zip
 
 echo option=%1
 pause
-if "%1_"=="/UPDATE" goto updateMe
-if "%1_"=="/ENDUPDATE" goto StartProcess
+
+if "_%1"=="_/HELLO" goto Hello
+if "_%1"=="_/UPDATE" goto updateMe
+if "_%1"=="_/ENDUPDATE" goto StartProcess
 
 ::There is no parametres, then download and unpack file.
 :downloadAndUnpack
@@ -31,6 +33,8 @@ goto endScript
 :updateMe
 ::The file was downloaded and un packed
 ::Running this new instance of the script
+echo update me
+pause
 del /S /Q C:\DNXSoftware\Extras\_GetExtras
 xcopy /E /Y %Temp%\DNXWin-main\_GetExtras C:\DNXSoftware\Extras\_GetExtras\
 cd %myF%
@@ -40,9 +44,15 @@ echo si estoy viendo esto, entonces no se ha pasado el control a la línea anter
 pause
 goto endScript
 
+:Hello
+echo Hello my friend!
+pause
+goto endScript
+
 :StartProcess
 echo Now, this script must navigate into all directories and run each subscript, for adding new options to _Get Extras menu.
 pause
 
 
 :endScript
+
