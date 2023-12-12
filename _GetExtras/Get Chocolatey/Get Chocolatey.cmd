@@ -42,25 +42,25 @@ exit /b
 ::================================================================================================= Check if EXTRA exist
 if exist "%checkEXTRA%" goto removeEntry
 ::------------------------------------------------------------------------------------------------- Add Entry if not exist
-echo addEntry
+echo --- addEntry
 set myP=%~dp0
 set myP=%myP:~0,-1%
 set "myICO=C:\DNXSoftware\Extras\_GetExtras\DNXEXTRAS.ico"
 if exist "%~dpn0.ico" set "myICO=%~dpn0.ico"
-call ..\createlnk.cmd "%~dpnx0" "%myP%" "%mySN%" "/GETEXTRA" "%myICO%"
+call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "%~dpnx0" "%myP%" "%mySN%" "/GETEXTRA" "%myICO%"
 if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\" mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\"
-move /Y "%~dpn0\%~n0.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\" >nul
+move /Y "%~dpn0.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\" >nul
 goto endScript
 
 ::------------------------------------------------------------------------------------------------- Remove Entry if exist
 :removeEntry
-echo removeEntry
+echo --- removeEntry
 if exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\%mySN%.lnk" del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Get Extras\%mySN%.lnk" >nul
 goto endScript
 
 ::================================================================================================= Start Main Script for Get EXTRA
 :getExtra
-echo getExtra
+echo --- getExtra
 call :getAdminPriv
 
 cls
@@ -72,7 +72,7 @@ pause
 echo Start process for installing %mySN:~4%
 ::start /wait "Chocolatey Install" powershell.exe -ExecutionPolicy Bypass -File ".\Get_Chocolatey.ps1"
 powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-pause
+
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
