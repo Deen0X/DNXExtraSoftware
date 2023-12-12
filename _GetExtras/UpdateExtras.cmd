@@ -5,6 +5,8 @@ cd "%~dp0"
 set myF=C:\DNXSoftware\Extras\_GetExtras\
 set myZIP=%TEMP%\DNXWIN.zip
 
+echo option=%1
+pause
 if "%1_"=="/UPDATE" goto updateMe
 if "%1_"=="/ENDUPDATE" goto StartProcess
 
@@ -13,7 +15,12 @@ if "%1_"=="/ENDUPDATE" goto StartProcess
 ::wget -O %temp%\UpdateExtras.cmd "https://raw.githubusercontent.com/Deen0X/DNXWIN/main/_GetExtras/UpdateExtras.cmd"
 wget -O %myZIP% https://github.com/Deen0X/DNXWIN/archive/refs/heads/main.zip
 cd %temp%
-7z x %myZIP% * %Temp%
+7z x -y %myZIP% * %Temp%
+::"_Check for Updated Extras.cmd" /UPDATE
+cd "%TEMP%\DNXWin-main\_GetExtras"
+echo current dir="%TEMP%\DNXWin-main\_GetExtras"
+echo im going to run updateextras on temp
+pause
 UpdateExtras.cmd /UPDATE
 echo si estoy viendo esto, entonces no se ha pasado el control a la línea anterior (id 1)
 pause
@@ -26,7 +33,8 @@ goto endScript
 del /S /Q C:\DNXSoftware\Extras\_GetExtras
 xcopy /E /Y %Temp%\DNXWin-main\_GetExtras C:\DNXSoftware\Extras\_GetExtras\
 cd %myF%
-_Check for Updated Extras.cmd /ENDUPDATE
+echo myF=%myF%
+"_Check for Updated Extras.cmd" /ENDUPDATE
 echo si estoy viendo esto, entonces no se ha pasado el control a la línea anterior (id 2)
 pause
 goto endScript
