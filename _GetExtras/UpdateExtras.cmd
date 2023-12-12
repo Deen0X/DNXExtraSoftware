@@ -33,12 +33,11 @@ goto endScript
 :updateMe
 ::The file was downloaded and un packed
 ::Running this new instance of the script
-echo update me
-pause
 del /S /Q C:\DNXSoftware\Extras\_GetExtras
 xcopy /E /Y %Temp%\DNXWin-main\_GetExtras C:\DNXSoftware\Extras\_GetExtras\
 cd %myF%
 echo myF=%myF%
+ren UpdateExtras.cmd "_Check for Updated Extras.cmd"
 "_Check for Updated Extras.cmd" /ENDUPDATE
 echo si estoy viendo esto, entonces no se ha pasado el control a la línea anterior (id 2)
 pause
