@@ -46,7 +46,7 @@ if "_%1"=="_/ENDUPDATE" goto StartProcess
 rmdir /S /Q %Temp%\DNXWin-main
 wget -O %myZIP% https://github.com/Deen0X/DNXWIN/archive/refs/heads/main.zip
 cd %temp%
-start "Unzip" /WAIT /MIN powershell -command 'Expand-Archive "%MyZIP%" "%Temp%"'
+start "Unzip" /WAIT /MIN powershell -command "Expand-Archive '%MyZIP%' '%Temp%'"
 del "%MyZIP%"
 ::7z x -y %myZIP% * %Temp%
 cd "%TEMP%\DNXWin-main\_GetExtras"
