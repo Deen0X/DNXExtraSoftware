@@ -27,6 +27,8 @@ if '%errorlevel%' NEQ '0' (
 ::================================================================================================= end checking admin
 :gotAdmin
 
+echo mode: %1
+pause
 if not exist "C:\Windows\System32\wget.exe" (
     ::Download wget to system32, for get this on general path for running directly.
     curl --output %SystemRoot%\System32\wget.exe -L https://eternallybored.org/misc/wget/1.21.4/64/wget.exe
