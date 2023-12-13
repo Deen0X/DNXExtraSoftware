@@ -34,8 +34,11 @@ ren UpdateExtras.cmd "_Check for Updated Extras.cmd" >nul
 goto endScript
 
 :StartProcess
+echo =============================================================================================================
+echo Start Extras Update
+echo Ckecking new entries
+echo =============================================================================================================
 
-::for /D %%G in ("C:\DNXSoftware\Extras\_GetExtras*") do :CheckFolder "%%G"
 FOR /D %%G in (%myF%*) do call :checkFolder "%%G"
 goto endScript
 
