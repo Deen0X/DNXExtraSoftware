@@ -3,6 +3,7 @@
 ::part of DNXWIN Project
 %~d0
 set myPath=%~dp0
+cd "%myPath%"
 
 ::get admin permissions for avoid doing this on subscripts
 ::================================================================================================= Check for permissions
@@ -27,7 +28,6 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
 
 
-cd "%myPath%"
 set myF=C:\DNXSoftware\Extras\_GetExtras\
 set myZIP=%TEMP%\DNXWIN.zip
 
