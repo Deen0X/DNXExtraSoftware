@@ -51,4 +51,3 @@ exit /b
 
 
 :endScript
-pause
