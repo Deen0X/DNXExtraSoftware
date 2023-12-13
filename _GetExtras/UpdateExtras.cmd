@@ -5,7 +5,6 @@
 set myPath=%~dp0
 cd "%myPath%"
 
-::get admin permissions for avoid doing this on subscripts
 ::================================================================================================= Check for permissions
 :getAdminPriv
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
