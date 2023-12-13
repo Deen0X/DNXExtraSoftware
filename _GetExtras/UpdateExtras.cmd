@@ -54,6 +54,13 @@ del /S /Q "C:\DNXSoftware\Extras\_GetExtras" >nul
 xcopy /E /Y "%Temp%\DNXWin-main\_GetExtras" "C:\DNXSoftware\Extras\_GetExtras\" >nul
 cd %myF%
 ren UpdateExtras.cmd "_Check for Updated Extras.cmd" >nul
+echo ============================================================================================================= Create Main Entry
+if not exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_Extra Software" mkdir C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_Extra Software"
+if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\" mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\"
+
+::CREAR LINK
+C:\DNXSoftware\Extras\_GetExtras\
+
 "_Check for Updated Extras.cmd" /ENDUPDATE
 goto endScript
 
