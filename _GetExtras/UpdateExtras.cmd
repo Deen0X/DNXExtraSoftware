@@ -26,8 +26,8 @@ goto endScript
 :updateMe
 ::The file was downloaded and un packed
 ::Running this new instance of the script
-del /S /Q C:\DNXSoftware\Extras\_GetExtras >nul
-xcopy /E /Y %Temp%\DNXWin-main\_GetExtras C:\DNXSoftware\Extras\_GetExtras\ >nul
+del /S /Q "C:\DNXSoftware\Extras\_GetExtras" >nul
+xcopy /E /Y "%Temp%\DNXWin-main\_GetExtras" "C:\DNXSoftware\Extras\_GetExtras\" >nul
 cd %myF%
 ren UpdateExtras.cmd "_Check for Updated Extras.cmd" >nul
 "_Check for Updated Extras.cmd" /ENDUPDATE
@@ -38,7 +38,7 @@ echo ===========================================================================
 echo Start Extras Update
 echo Ckecking new entries
 echo =============================================================================================================
-
+del /S /Q "%TEMP%\DNXWin-main\_GetExtras" >nul
 FOR /D %%G in (%myF%*) do call :checkFolder "%%G"
 goto endScript
 
