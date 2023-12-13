@@ -62,6 +62,7 @@ if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Program
 
 set "%myICO%=C:\DNXSoftware\Extras\_GetExtras\DNXEXTRAS.ico"
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\_GetExtras\_Check for Updated Extras.cmd" "C:\DNXSoftware\Extras\_GetExtras\" "_Check for Updated Extras" "" "%myICO%"
+pause
 move "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_Extra Software\_Check for Updated Extras.lnk" 
 
 "_Check for Updated Extras.cmd" /ENDUPDATE
