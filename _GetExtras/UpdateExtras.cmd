@@ -56,6 +56,7 @@ goto endScript
 :updateMe
 ::The file was downloaded and un packed
 ::Running this new instance of the script
+pause
 rmdir /S /Q "C:\DNXSoftware\Extras\_GetExtras" >nul
 xcopy /E /Y "%Temp%\DNXWin-main\_GetExtras" "C:\DNXSoftware\Extras\_GetExtras\" >nul
 cd %myF%
