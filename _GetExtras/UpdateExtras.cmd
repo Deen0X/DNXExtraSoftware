@@ -50,7 +50,6 @@ start "Unzip" /WAIT /MIN powershell -command "Expand-Archive '%MyZIP%' '%Temp%'"
 del "%MyZIP%"
 ::7z x -y %myZIP% * %Temp%
 cd "%TEMP%\DNXWin-main\_GetExtras"
-pause
 UpdateExtras.cmd /UPDATE
 goto endScript
 
