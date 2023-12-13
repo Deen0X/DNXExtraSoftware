@@ -59,7 +59,7 @@ if not exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_Extra Softwa
 if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\" mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\"
 
 ::CREAR LINK
-
+echo on
 set "myICO=C:\DNXSoftware\Extras\_GetExtras\DNXEXTRAS.ico"
 echo call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\_GetExtras\_Check for Updated Extras.cmd" "C:\DNXSoftware\Extras\_GetExtras\" "_Check for Updated Extras" "" "%myICO%"
 pause
