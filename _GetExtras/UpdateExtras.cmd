@@ -27,8 +27,6 @@ if '%errorlevel%' NEQ '0' (
 ::================================================================================================= end checking admin
 :gotAdmin
 
-echo mode: %1
-pause
 if not exist "C:\Windows\System32\wget.exe" (
     ::Download wget to system32, for get this on general path for running directly.
     curl --output %SystemRoot%\System32\wget.exe -L https://eternallybored.org/misc/wget/1.21.4/64/wget.exe
@@ -58,7 +56,6 @@ goto endScript
 :updateMe
 ::The file was downloaded and un packed
 ::Running this new instance of the script
-pause
 rmdir /S /Q "C:\DNXSoftware\Extras\_GetExtras" >nul
 xcopy /E /Y "%Temp%\DNXWin-main\_GetExtras" "C:\DNXSoftware\Extras\_GetExtras\" >nul
 cd %myF%
