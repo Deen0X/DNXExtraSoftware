@@ -73,7 +73,6 @@ echo Start Extras Update
 echo Ckecking new entries
 echo =============================================================================================================
 rmdir /S /Q "%TEMP%\DNXWin-main"
-pause
 FOR /D %%G in (%myF%*) do call :checkFolder "%%G"
 goto endScript
 
