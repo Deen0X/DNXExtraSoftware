@@ -72,7 +72,7 @@ echo ===========================================================================
 echo Start Extras Update
 echo Ckecking new entries
 echo =============================================================================================================
-del /S /Q "%TEMP%\DNXWin-main\_GetExtras" >nul
+rmdir /S /Q "%TEMP%\DNXWin-main\_GetExtras" >nul
 FOR /D %%G in (%myF%*) do call :checkFolder "%%G"
 goto endScript
 
