@@ -56,7 +56,7 @@ goto endScript
 :updateMe
 ::The file was downloaded and un packed
 ::Running this new instance of the script
-del /S /Q "C:\DNXSoftware\Extras\_GetExtras" >nul
+rmdir /S /Q "C:\DNXSoftware\Extras\_GetExtras" >nul
 xcopy /E /Y "%Temp%\DNXWin-main\_GetExtras" "C:\DNXSoftware\Extras\_GetExtras\" >nul
 cd %myF%
 ren UpdateExtras.cmd "_Check for Updated Extras.cmd" >nul
