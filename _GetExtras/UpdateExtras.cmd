@@ -60,7 +60,7 @@ if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Program
 
 ::CREAR LINK
 
-set "%myICO%=C:\DNXSoftware\Extras\_GetExtras\_Check for Updated Extras.ico"
+set "%myICO%=C:\DNXSoftware\Extras\_GetExtras\DNXEXTRAS.ico"
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\_GetExtras\_Check for Updated Extras.cmd" "C:\DNXSoftware\Extras\_GetExtras\" "_Check for Updated Extras" "" "%myICO%"
 move "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_Extra Software\_Check for Updated Extras.lnk" 
 
