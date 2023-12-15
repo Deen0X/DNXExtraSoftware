@@ -75,10 +75,14 @@ pause
 echo Start process for installing %mySN:~4%
 ::start /wait "Group Policy Editor Install" powershell.exe -ExecutionPolicy Bypass -File ".\Get Group Policy Editor.ps1"
 
-dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >List.txt 
-dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>List.txt 
-for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i" 
+::dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >List.txt 
+::dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>List.txt 
+::for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i" 
 
+wget -Oadd_gpedit_msc.zip https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
+C:\DNXSoftware\Extras\_GetExtras\7z x -o"%~dp0" add_gpedit_msc.zip
+setup.exe
+call gpedit-enabler.bat
 
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
