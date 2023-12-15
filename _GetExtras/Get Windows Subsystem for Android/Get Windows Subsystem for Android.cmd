@@ -27,6 +27,7 @@ set myP=%myP:~0,-1%
 set "myICO=C:\DNXSoftware\Extras\_GetExtras\DNXEXTRAS.ico"
 if exist "%~dpn0.ico" set "myICO=%~dpn0.ico"
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "%~dpnx0" "%myP%" "%mySN%" "/GETEXTRA" "%myICO%"
+cd %myP%
 if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\" mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\"
 move /Y "%~dpn0.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\" >nul
 goto endScript
