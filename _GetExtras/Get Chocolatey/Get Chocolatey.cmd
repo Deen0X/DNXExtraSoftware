@@ -10,6 +10,8 @@ set "checkEXTRA=C:\ProgramData\chocolatey\choco.exe"
 ::#################################################################################################
 set xDESCEXTRA=Chocolatey is a machine-level, command-line package manager and installer for software on Microsoft Windows. It uses the NuGet packaging infrastructure and Windows PowerShell to simplify the process of downloading and installing software.
 ::#################################################################################################
+set xSOURCE=https://gist.github.com/ScriptAutomate/02e0cf33786f869740ee963ed6a913c1
+::#################################################################################################
 
 if "_%1"=="_/GETEXTRA" goto getExtra
 goto addEntry
@@ -64,6 +66,8 @@ if '%errorlevel%' NEQ '0' (
 cls
 echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
+echo .
+echo Source      : %xSOURCE%
 echo --------------------------------------------------------------------------
 echo press any key to continue the installation. (close this windows for cancel)
 pause
