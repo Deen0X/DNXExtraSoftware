@@ -71,7 +71,7 @@ pause
 
 echo Start process for installing %mySN:~4%
 wget -Owsa.7z "https://github.com/MustardChef/WSABuilds/releases/download/Windows_10_2308.40000.3.0/WSA_2308.40000.3.0_x64_Release-Nightly-MindTheGapps-13.0-RemovedAmazon_Windows_10.7z"
-7z x  -oC:\DNXSoftware\Extras wsa.7z
+C:\DNXSoftware\Extras\_GetExtras\7z x  -oC:\DNXSoftware\Extras wsa.7z
 del wsa.7z
 ren C:\DNXSoftware\Extras\WSA_2308.40000.3.0_x64 WSA
 C:
