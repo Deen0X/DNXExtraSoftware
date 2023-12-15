@@ -73,8 +73,7 @@ echo --------------------------------------------------------------------------
 echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
-::start /wait "Chocolatey Install" powershell.exe -ExecutionPolicy Bypass -File ".\Get_Chocolatey.ps1"
-powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; Get-ChildItem @("C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package*.mum","C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package*.mum") | ForEach-Object { dism.exe /online /norestart /add-package:"$_" }
+start /wait "Group Policy Editor Install" powershell.exe -ExecutionPolicy Bypass -File ".\Get Group Policy Editor.ps1"
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
