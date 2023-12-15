@@ -6,7 +6,7 @@ setlocal enableextensions disabledelayedexpansion
 
 :: ALL scripts must start with "GET " text
 ::################################################################################################# Config variable for checking if Extra is installed
-set "checkEXTRA=C:\ProgramData\chocolatey\choco.exe"
+set "checkEXTRA="C:\DNXSoftware\ALLINONE_Runtimes.txt""
 ::#################################################################################################
 set xDESCEXTRA=The "All in One Runtimes" package bundles all important runtime packages that are necessary to ensure that all programs will work smoothly and it will installs them automatically also.
 ::#################################################################################################
@@ -72,18 +72,19 @@ echo NOTE: the original source is https://www.sereby.org/site/All%20in%20One%20R
 echo but the download link is dynamic and can´t be used directly on this script.
 echo for this reason i found an alternative download link to use.
 echo --------------------------------------------------------------------------
-echo
-pause
-echo Note that becuase its difficult to check if this program was installed on the system, i will remove the entry on "Extras Software"
-echo If you want to re-launch this script, please re-run "C:\DNXSoftware\Extras\_GetExtras\Get AllInOne Runtimes\GetAllInOne Runtimes.cmd"
+::echo Note that becuase its difficult to check if this program was installed on the system, i will remove the entry on "Extras Software"
+::echo If you want to re-launch this script, please re-run "C:\DNXSoftware\Extras\_GetExtras\Get AllInOne Runtimes\GetAllInOne Runtimes.cmd"
 echo press any key for continue installation.
 pause
-del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\%mySN%.lnk" >nul
 echo Start process for installing %mySN:~4%
 wget -Oaioruntime.exe http://static.updatestar.net/dl/allinone/aio-runtimes_v2.5.0.exe
 aioruntime.exe
-
+echo installed >"C:\DNXSoftware\ALLINONE_Runtimes.txt"
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
+::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
+echo %checkEXTRA%
+if exist "%checkEXTRA%" goto removeEntry
+goto endScript
 
 
 ::================================================================================================= End Script
