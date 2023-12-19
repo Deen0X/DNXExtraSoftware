@@ -14,7 +14,7 @@ set xDESCEXTRA=MotionAssistant is a gyro data simulation tool that can receive a
 set xSOURCE=Baidu. Using alternative download link (DNX Github)
 ::Original Link: https://pan.baidu.com/s/1DTAAk3EmEj3crtxacR9MgA?pwd=0kix#list/path=%2Fsharelink3926352113-392076150813444%2F%E4%BD%93%E6%84%9F%E5%8A%A9%E6%89%8B&parentPath=%2Fsharelink3926352113-392076150813444
 ::#################################################################################################
-set xDownload=https://github.com/Deen0X/DNXWIN/raw/main/_AltDownloads/MotionAssistant/MotionAssistant_Setup_1191.msi
+set xDownload=https://github.com/Deen0X/DNXWIN_ALTDOWNLOADS/raw/main/MotionAssistant/MotionAssistant_Setup_1191.msi
 ::#################################################################################################
 
 if "_%1"=="_/GETEXTRA" goto getExtra
