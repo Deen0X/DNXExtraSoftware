@@ -90,3 +90,4 @@ exit /b
 
 
 :endScript
+ie4uinit.exe -show
