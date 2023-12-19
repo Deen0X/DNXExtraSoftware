@@ -2,7 +2,10 @@
   "hotkeyId": 52,
   "inputsChord": {
     "State": {
-      "State": {}
+      "State": {
+        "B1": true,
+        "L4": true
+      }
     },
     "OutputKeys": [
       {
@@ -38,7 +41,7 @@
         "IsExtendedKey": false
       }
     ],
-    "InputsType": 2
+    "InputsType": 1
   },
   "Name": "CTRL+C",
   "IsPinned": false
