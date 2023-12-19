@@ -84,6 +84,7 @@ echo Start process for installing %mySN:~4%
 wget -OSetup.zip %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -oC:\DNXSoftware\Extras\Magpie Setup.zip
 del Setup.zip
+call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\Magpie\Magpie.exe" "C:\DNXSoftware\Extras\Magpie" "Magpie Scaling Tool" "/GETEXTRA"
 if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\" mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
 copy /Y "C:\DNXSoftware\Extras\Magpie\Magpie Windows Scaling.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
 
