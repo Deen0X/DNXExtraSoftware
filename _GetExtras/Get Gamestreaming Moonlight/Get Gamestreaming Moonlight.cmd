@@ -6,7 +6,7 @@ setlocal enableextensions disabledelayedexpansion
 
 :: ALL scripts must start with "GET " text
 ::################################################################################################# Config variable for checking if Extra is installed
-set "checkEXTRA="C:\Program Files\Moonlight Game Streaming\Moonlight.exe""
+set "checkEXTRA=C:\Program Files\Moonlight Game Streaming\Moonlight.exe"
 ::#################################################################################################
 set xDESCEXTRA=Moonlight PC is an open source PC client for NVIDIA GameStream and Sunshine. You can stream games from your gaming PC to your portable device and/or other PCs.
 ::#################################################################################################
