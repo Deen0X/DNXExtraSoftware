@@ -1,5 +1,0 @@
-<package id="hhcompanion" name="HandHeld Companion" group="Steam Deck">
-	<install>
-		<cmd path="DNXSoft.cmd" param="" />
-	</install>
-</package>
