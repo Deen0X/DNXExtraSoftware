@@ -1,0 +1,5 @@
+<package id="motionassistant" name="Motion Assistant" group="GPD-WIN3">
+	<install>
+		<cmd path="DNXSoft.cmd" param="" />
+	</install>
+</package>
