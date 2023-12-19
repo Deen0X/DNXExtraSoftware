@@ -6,7 +6,7 @@ setlocal enableextensions disabledelayedexpansion
 
 :: ALL scripts must start with "GET " text
 ::################################################################################################# Config variable for checking if Extra is installed
-set "checkEXTRA="C:\Program Files\Sunshine\sunshine.exe"
+set "checkEXTRA=C:\Program Files\Sunshine\sunshine.exe"
 ::#################################################################################################
 set xDESCEXTRA=Sunshine is a self-hosted game stream host for Moonlight. Offering low latency, cloud gaming server capabilities with support for AMD, Intel, and Nvidia GPUs for hardware encoding. 
 ::#################################################################################################
