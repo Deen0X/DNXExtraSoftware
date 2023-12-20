@@ -1,6 +1,7 @@
  @echo off
 ::Script created by:Deen0X
 ::part of DNXWIN Project
+set GENPARAM=%1
 %~d0
 set myPath=%~dp0
 cd "%myPath%"
@@ -86,7 +87,7 @@ goto endScript
 set "mySubS=%~n1"
 set "mySubPath=%~1"
 echo Checking %mySubS%
-echo call "%mySubPath%\%mySubS%.cmd" %1
+echo call "%mySubPath%\%mySubS%.cmd" %GENPARAM%
 pause
 exit /b
 
