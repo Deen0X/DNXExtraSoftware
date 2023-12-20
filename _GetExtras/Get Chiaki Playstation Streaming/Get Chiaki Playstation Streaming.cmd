@@ -6,7 +6,7 @@ setlocal enableextensions disabledelayedexpansion
 
 :: ALL scripts must start with "GET " text
 ::################################################################################################# Config variable for checking if Extra is installed
-set "checkEXTRA=C:\1Program Files\Moonlight Game Streaming\Moonlight.exe"
+set "checkEXTRA=C:\DNXSoftware\Extras\Chiaki\Chiaki.exe"
 ::#################################################################################################
 set xDESCEXTRA=Chiaki is a Free and Open Source Software Client for PlayStation 4 and PlayStation 5 Remote Play for Linux, FreeBSD, OpenBSD, NetBSD, Android, macOS, Windows, Nintendo Switch and potentially even more platforms.
 ::#################################################################################################
