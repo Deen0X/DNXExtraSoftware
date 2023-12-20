@@ -87,7 +87,7 @@ goto endScript
 set "mySubS=%~n1"
 set "mySubPath=%~1"
 echo Checking %mySubS%
-echo call "%mySubPath%\%mySubS%.cmd" %GENPARAM%
+call "%mySubPath%\%mySubS%.cmd" %GENPARAM%
 pause
 exit /b
 
