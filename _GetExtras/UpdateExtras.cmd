@@ -79,7 +79,6 @@ echo Start Extras Update
 echo Ckecking new entries
 echo =============================================================================================================
 rmdir /S /Q "%TEMP%\DNXWin-main"
-pause
 FOR /D %%G in ("%myF%*") do call :checkFolder "%%G"
 goto endScript
 
@@ -88,7 +87,6 @@ set "mySubS=%~n1"
 set "mySubPath=%~1"
 echo Checking %mySubS%
 call "%mySubPath%\%mySubS%.cmd" %GENPARAM%
-pause
 exit /b
 
 
