@@ -1,4 +1,4 @@
-@echo off
+ @echo off
 ::Script created by:Deen0X
 ::part of DNXWIN Project
 %~d0
@@ -86,7 +86,8 @@ goto endScript
 set "mySubS=%~n1"
 set "mySubPath=%~1"
 echo Checking %mySubS%
-call "%mySubPath%\%mySubS%.cmd" %1
+echo call "%mySubPath%\%mySubS%.cmd" %1
+pause
 exit /b
 
 
