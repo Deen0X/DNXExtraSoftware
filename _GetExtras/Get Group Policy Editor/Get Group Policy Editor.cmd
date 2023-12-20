@@ -13,6 +13,7 @@ set xDESCEXTRA=Chocolatey is a machine-level, command-line package manager and i
 set xSOURCE=https://gist.github.com/lelegard/8da0b20cc35708852c14fcf899651204
 ::#################################################################################################
 
+if "_%1"=="_/ADDMENU" goto addEntry2
 if "_%1"=="_/GETEXTRA" goto getExtra
 goto addEntry
 
@@ -22,6 +23,7 @@ goto addEntry
 echo "%checkEXTRA%"
 if exist "%checkEXTRA%" goto removeEntry
 ::------------------------------------------------------------------------------------------------- Add Entry if not exist
+:addEntry2
 echo --- addEntry
 set myP=%~dp0
 set myP=%myP:~0,-1%
