@@ -17,6 +17,7 @@ set xDownload=https://github.com/Valkirie/HandheldCompanion/releases/download/0.
 ::#################################################################################################
 
 if "_%1"=="_/GETEXTRA" goto getExtra
+if "_%1"=="_/ADDMENU" goto addEntry2
 goto addEntry
 
 
@@ -25,6 +26,7 @@ goto addEntry
 echo "%checkEXTRA%"
 if exist "%checkEXTRA%" goto removeEntry
 ::------------------------------------------------------------------------------------------------- Add Entry if not exist
+:addEntry2
 echo --- addEntry
 set myP=%~dp0
 set myP=%myP:~0,-1%
