@@ -1,7 +1,7 @@
  @echo off
 ::Script created by:Deen0X
 ::part of DNXWIN Project
-set GENPARAM=%1
+set GENPARAM=%2
 %~d0
 set myPath=%~dp0
 cd "%myPath%"
