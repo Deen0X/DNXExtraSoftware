@@ -80,6 +80,7 @@ echo Ckecking new entries
 echo =============================================================================================================
 rmdir /S /Q "%TEMP%\DNXWin-main"
 FOR /D %%G in ("%myF%*") do call :checkFolder "%%G"
+cd %myP%
 goto endScript
 
 :checkFolder
