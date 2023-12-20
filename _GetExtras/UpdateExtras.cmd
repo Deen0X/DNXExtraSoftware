@@ -50,7 +50,7 @@ start "Unzip" /WAIT /MIN powershell -command "Expand-Archive '%MyZIP%' '%Temp%'"
 del "%MyZIP%"
 ::7z x -y %myZIP% * %Temp%
 cd "%TEMP%\DNXWin-main\_GetExtras"
-UpdateExtras.cmd /UPDATE
+UpdateExtras.cmd /UPDATE %GENPARAM%
 goto endScript
 
 :updateMe
@@ -70,7 +70,7 @@ set "myICO=C:\DNXSoftware\Extras\_GetExtras\DNXEXTRAS.ico"
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\_GetExtras\_Check for Updated Extras.cmd" "C:\DNXSoftware\Extras\_GetExtras\" "_Check for Updated Extras" "" "%myICO%"
 move "_Check for Updated Extras.lnk" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_Extra Software\_Check for Updated Extras.lnk" >nul
 
-"_Check for Updated Extras.cmd" /ENDUPDATE
+"_Check for Updated Extras.cmd" /ENDUPDATE %GENPARAM%
 goto endScript
 
 :StartProcess
