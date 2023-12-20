@@ -80,7 +80,7 @@ echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
 
-::curl -L %xDownload% --output GSM.zip
+curl -L %xDownload% --output GSM.zip
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -oC:\DNXSoftware\Extras\GameSaveManager GSM.Zip
 curl -L %xDownloadDB% --output db-update.gsdu
 xcopy /E /Y Settings\* C:\DNXSoftware\Extras\GameSaveManager\Settings\
