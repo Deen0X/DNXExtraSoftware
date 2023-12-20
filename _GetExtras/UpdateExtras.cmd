@@ -85,6 +85,7 @@ goto endScript
 set "mySubS=%~n1"
 set "mySubPath=%~1"
 echo Checking %mySubS%
+pause
 call "%mySubPath%\%mySubS%.cmd" %1
 exit /b
 
