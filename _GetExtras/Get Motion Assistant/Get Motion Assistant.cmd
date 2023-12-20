@@ -18,6 +18,7 @@ set xDownload=https://github.com/Deen0X/DNXWIN_ALTDOWNLOADS/raw/main/MotionAssis
 ::#################################################################################################
 
 if "_%1"=="_/GETEXTRA" goto getExtra
+if "_%1"=="_/ADDMENU" goto addEntry2
 goto addEntry
 
 ::https://github.com/Deen0X/DNXWIN/blob/main/_AltDownloads/MotionAssistant/MotionAssistant_Setup_1191.msi
@@ -26,6 +27,7 @@ goto addEntry
 echo "%checkEXTRA%"
 if exist "%checkEXTRA%" goto removeEntry
 ::------------------------------------------------------------------------------------------------- Add Entry if not exist
+:addEntry2
 echo --- addEntry
 set myP=%~dp0
 set myP=%myP:~0,-1%
