@@ -6,7 +6,7 @@ set mySN=%~n0
 setlocal enableextensions disabledelayedexpansion
 :: ALL scripts must start with "GET " text
 ::################################################################################################# Config variable for checking if Extra is installed
-set "checkEXTRA=C:\1DNXSoftware\Extras\Autowall\Autowall.exe"
+set "checkEXTRA=C:\DNXSoftware\Extras\Autowall\Autowall.exe"
 ::#################################################################################################
 set xDESCEXTRA=Turn videos, gifs and webs into windows live wallpapers. The most simple and useful Weebp implementation in autoit.
 ::#################################################################################################
