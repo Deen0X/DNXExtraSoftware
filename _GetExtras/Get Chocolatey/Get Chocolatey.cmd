@@ -77,7 +77,10 @@ pause
 echo Start process for installing %mySN:~4%
 ::start /wait "Chocolatey Install" powershell.exe -ExecutionPolicy Bypass -File ".\Get_Chocolatey.ps1"
 powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
+echo #########################################################################################################
+echo #########################################################################################################
+echo Chocolatey installed. Now you can use it from Powershell with "choco" command.
+pause
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
