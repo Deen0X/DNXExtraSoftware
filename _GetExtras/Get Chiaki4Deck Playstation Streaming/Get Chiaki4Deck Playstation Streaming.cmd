@@ -47,27 +47,6 @@ goto endScript
 :getExtra
 echo --- getExtra
 
-::================================================================================================= Check for permissions
-:getAdminPriv
-::>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-::REM --> If error flag set, we do not have admin.
-::if '%errorlevel%' NEQ '0' (
-::    echo Requesting administrative privileges...
-::    goto UACPrompt
-::) else ( goto gotAdmin )
-::
-:::UACPrompt
-::    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\\getadmin.vbs"
-::    set params = %*:"="
-::    ::echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
-::    echo UAC.ShellExecute "cmd.exe", "/c  %~s0 %1 %2 %3", "", "runas", 1 >> "%temp%\\getadmin.vbs"
-::
-::    "%temp%\getadmin.vbs"
-::    del "%temp%\\getadmin.vbs"
-::    exit /B
-::::================================================================================================= end checking admin
-:::gotAdmin
-
 cls
 echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
@@ -85,11 +64,11 @@ ren C:\DNXSoftware\Extras\Chiaki4deck-VC Chiaki4deck
 copy "Get Chiaki4Deck Playstation Streaming.ico" "C:\DNXSoftware\Extras\Chiaki4Deck\Chiaki4Deck.ico"
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\Chiaki4Deck\Chiaki.exe" "C:\DNXSoftware\Extras\Chiaki4Deck" "%mySN:~4%" "/GETEXTRA" "C:\DNXSoftware\Extras\Chiaki4Deck\Chiaki4Deck.ico"
 move "C:\DNXSoftware\Extras\Chiaki4Deck\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
-
 REG ADD "HKEY_CURRENT_USER\SOFTWARE\Chiaki\Chiaki\settings" /v "auto_discovery" /t REG_SZ /d "true" /f
 REG ADD "HKEY_CURRENT_USER\SOFTWARE\Chiaki\Chiaki\settings" /v "audio_buffer_size" /t REG_DWORD /d 1200 /f
 REG ADD "HKEY_CURRENT_USER\SOFTWARE\Chiaki\Chiaki\settings" /v "codec" /t REG_SZ /d "h264" /f
 REG ADD "HKEY_CURRENT_USER\SOFTWARE\Chiaki\Chiaki\settings" /v "log_verbose" /t REG_SZ /d "true" /f
+start "%mySN:~4%" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\%mySN:~4%.lnk"
 
 
 ::Chiaki.zip /install /passive /norestart
