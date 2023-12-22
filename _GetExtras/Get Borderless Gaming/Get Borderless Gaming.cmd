@@ -85,7 +85,7 @@ echo Start process for installing %mySN:~4%
 
 wget -OSetup.exe %xDownload%
 Setup.exe /verysilent
-
+Start "%mySN:~4%" "%checkEXTRA%"
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
