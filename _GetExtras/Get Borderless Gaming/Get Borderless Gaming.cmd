@@ -87,9 +87,7 @@ wget -OSetup.exe %xDownload%
 Setup.exe /verysilent
 cd "C:\Program Files (x86)\Borderless Gaming"
 C:
-echo Start "%mySN:~4%" "%checkEXTRA%"
-
-pause
+Start "%mySN:~4%" "%checkEXTRA%"
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
