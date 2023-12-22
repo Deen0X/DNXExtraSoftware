@@ -10,7 +10,10 @@ set "checkEXTRA=C:\Windows\System32\gpedit.msc"
 ::#################################################################################################
 set xDESCEXTRA=Chocolatey is a machine-level, command-line package manager and installer for software on Microsoft Windows. It uses the NuGet packaging infrastructure and Windows PowerShell to simplify the process of downloading and installing software.
 ::#################################################################################################
-set xSOURCE=https://gist.github.com/lelegard/8da0b20cc35708852c14fcf899651204
+set xSOURCE=https://www.majorgeeks.com/content/page/enable_group_policy_editor_in_windows_10_home_edition.html
+::#################################################################################################
+::set xDownload=https://gist.github.com/lelegard/8da0b20cc35708852c14fcf899651204
+set xDownload=https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
 ::#################################################################################################
 
 if "_%1"=="_/ADDMENU" goto addEntry2
@@ -81,7 +84,7 @@ echo Start process for installing %mySN:~4%
 ::dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>List.txt 
 ::for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i" 
 
-wget -Oadd_gpedit_msc.zip https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
+wget -Oadd_gpedit_msc.zip %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -o"%~dp0" add_gpedit_msc.zip
 setup.exe
 call gpedit-enabler.bat
