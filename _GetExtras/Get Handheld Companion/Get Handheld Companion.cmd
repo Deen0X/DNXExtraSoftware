@@ -48,6 +48,27 @@ goto endScript
 :getExtra
 echo --- getExtra
 
+::================================================================================================= Check for permissions
+:getAdminPriv
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+REM --> If error flag set, we do not have admin.
+if '%errorlevel%' NEQ '0' (
+    echo Requesting administrative privileges...
+    goto UACPrompt
+) else ( goto gotAdmin )
+
+:UACPrompt
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\\getadmin.vbs"
+    set params = %*:"="
+    ::echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+    echo UAC.ShellExecute "cmd.exe", "/c  %~s0 %1 %2 %3", "", "runas", 1 >> "%temp%\\getadmin.vbs"
+
+    "%temp%\getadmin.vbs"
+    del "%temp%\\getadmin.vbs"
+    exit /B
+::================================================================================================= end checking admin
+:gotAdmin
+
 cls
 echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
@@ -59,6 +80,8 @@ pause
 wget -OSetup.exe %xDownload%
 echo Start process for installing %mySN:~4%
 echo This may take a while... patience...
+mkdir "C:\Program Files\HWiNFO64\"
+copy HWiNFO64.ini "C:\Program Files\HWiNFO64\HWiNFO64.ini"
 Setup.exe /verysilent /supressmsgboxes /norestart /forcecloseapplications
 echo Copying config
 cd Handheld Companion
