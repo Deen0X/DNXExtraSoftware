@@ -84,13 +84,8 @@ Setup.msi /quiet
 echo Copying config
 cd "Motion Assistant"
 call DNXSoft.cmd
-cd "%myP%"
-
-::Example unpack
-::C:\DNXSoftware\Extras\_GetExtras\7z x  -oC:\DNXSoftware\Extras wsa.7z
-::del wsa.7z
-::ren C:\DNXSoftware\Extras\WSA_2308.40000.3.0_x64 WSA
-
+cd "C:\Program Files\Motion Assistant\"
+start "%mySN:~4%" "%checkEXTRA%"
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
