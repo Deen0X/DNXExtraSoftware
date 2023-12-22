@@ -85,7 +85,7 @@ echo Start process for installing %mySN:~4%
 ::for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i" 
 
 wget -Oadd_gpedit_msc.zip %xDownload%
-C:\DNXSoftware\Extras\_GetExtras\7z x -o"%~dp0" add_gpedit_msc.zip
+C:\DNXSoftware\Extras\_GetExtras\7z -y x -o"%~dp0" add_gpedit_msc.zip
 setup.exe
 call gpedit-enabler.bat
 xcopy /E /Y C:\Windows\SysWOW64\GroupPolicy\ C:\Windows\System32\
