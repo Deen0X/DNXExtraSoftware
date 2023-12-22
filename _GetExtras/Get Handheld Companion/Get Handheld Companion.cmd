@@ -48,27 +48,6 @@ goto endScript
 :getExtra
 echo --- getExtra
 
-::================================================================================================= Check for permissions
-:getAdminPriv
-::>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-::REM --> If error flag set, we do not have admin.
-::if '%errorlevel%' NEQ '0' (
-::    echo Requesting administrative privileges...
-::    goto UACPrompt
-::) else ( goto gotAdmin )
-::
-:::UACPrompt
-::    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\\getadmin.vbs"
-::    set params = %*:"="
-::    ::echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
-::    echo UAC.ShellExecute "cmd.exe", "/c  %~s0 %1 %2 %3", "", "runas", 1 >> "%temp%\\getadmin.vbs"
-::
-::    "%temp%\getadmin.vbs"
-::    del "%temp%\\getadmin.vbs"
-::    exit /B
-::::================================================================================================= end checking admin
-:::gotAdmin
-
 cls
 echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
@@ -85,13 +64,7 @@ echo Copying config
 cd Handheld Companion
 call DNXSoft.cmd
 cd "%myP%"
-
-::Example unpack
-::C:\DNXSoftware\Extras\_GetExtras\7z x  -oC:\DNXSoftware\Extras wsa.7z
-::del wsa.7z
-::ren C:\DNXSoftware\Extras\WSA_2308.40000.3.0_x64 WSA
-
-
+start "Handheld Companion" "%checkEXTRA%"
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
 if exist "%checkEXTRA%" goto removeEntry
