@@ -6,6 +6,8 @@ set GENPARAM=%2
 set myPath=%~dp0
 cd "%myPath%"
 
+if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware" mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware"
+
 ::================================================================================================= Check for permissions
 :getAdminPriv
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
