@@ -62,7 +62,7 @@ C:\DNXSoftware\Extras\_GetExtras\7z x -y -oChiaki4d Chiaki.Zip
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -oC:\DNXSoftware\Extras .\Chiaki4d\Chiaki4deck-win_x64-VC-1.4.1.Zip
 ren C:\DNXSoftware\Extras\Chiaki4deck-VC Chiaki4deck
 copy "Get Chiaki4Deck Playstation Streaming.ico" "C:\DNXSoftware\Extras\Chiaki4Deck\Chiaki4Deck.ico"
-call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\Chiaki4Deck\Chiaki.exe" "C:\DNXSoftware\Extras\Chiaki4Deck" "%mySN:~4%" "/GETEXTRA" "C:\DNXSoftware\Extras\Chiaki4Deck\Chiaki4Deck.ico"
+call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\Chiaki4Deck\Chiaki.exe" "C:\DNXSoftware\Extras\Chiaki4Deck" "%mySN:~4%" "" "C:\DNXSoftware\Extras\Chiaki4Deck\Chiaki4Deck.ico"
 move "C:\DNXSoftware\Extras\Chiaki4Deck\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
 REG ADD "HKEY_CURRENT_USER\SOFTWARE\Chiaki\Chiaki\settings" /v "auto_discovery" /t REG_SZ /d "true" /f
 REG ADD "HKEY_CURRENT_USER\SOFTWARE\Chiaki\Chiaki\settings" /v "audio_buffer_size" /t REG_DWORD /d 1200 /f
