@@ -84,7 +84,7 @@ wget -O%auxNameExt% %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -o"C:\DNXSoftware\Extras\%mySN:~4%" %auxNameExt%
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\%mySN:~4%\%auxName%" "C:\DNXSoftware\Extras\%mySN:~4%" "%mySN:~4%" "" "C:\DNXSoftware\Extras\%mySN:~4%\%auxName%"
 move "C:\DNXSoftware\Extras\%mySN:~4%\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
-
+start "%mySN:~4%" "%checkEXTRA%"
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
