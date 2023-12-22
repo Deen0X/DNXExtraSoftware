@@ -83,13 +83,7 @@ C:\DNXSoftware\Extras\_GetExtras\7z x -y -oC:\DNXSoftware\Extras\Chiaki Chiaki.Z
 copy "Get Chiaki Playstation Streaming.ico" "C:\DNXSoftware\Extras\Chiaki\Chiaki.ico"
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\Chiaki\Chiaki.exe" "C:\DNXSoftware\Extras\Chiaki" "%mySN:~4%" "/GETEXTRA" "C:\DNXSoftware\Extras\Chiaki\Chiaki.ico"
 move "C:\DNXSoftware\Extras\Chiaki\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
-::Chiaki.zip /install /passive /norestart
-
-::Example unpack
-::C:\DNXSoftware\Extras\_GetExtras\7z x  -oC:\DNXSoftware\Extras wsa.7z
-::del wsa.7z
-::ren C:\DNXSoftware\Extras\WSA_2308.40000.3.0_x64 WSA
-
+"%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\%mySN:~4%.lnk"
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
