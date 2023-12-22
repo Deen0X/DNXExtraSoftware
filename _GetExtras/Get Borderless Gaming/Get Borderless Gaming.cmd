@@ -85,7 +85,11 @@ echo Start process for installing %mySN:~4%
 
 wget -OSetup.exe %xDownload%
 Setup.exe /verysilent
-Start "%mySN:~4%" "%checkEXTRA%"
+cd "C:\Program Files (x86)\Borderless Gaming"
+C:
+echo Start "%mySN:~4%" "%checkEXTRA%"
+
+pause
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
