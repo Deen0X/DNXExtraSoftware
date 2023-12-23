@@ -79,6 +79,7 @@ del wsa.7z
 ren C:\DNXSoftware\Extras\WSA_2308.40000.3.0_x64 WSA
 C:
 cd C:\DNXSoftware\Extras\WSA\
+start "WSA First Run" "C:\DNXSoftware\Extras\WSA\run.bat"
 
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
