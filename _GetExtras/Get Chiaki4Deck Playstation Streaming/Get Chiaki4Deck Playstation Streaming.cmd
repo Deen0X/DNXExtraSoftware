@@ -57,7 +57,7 @@ echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
 
-wget -OChiaki.zip %xDownload%
+wget --no-check-certificate -OChiaki.zip %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -oChiaki4d Chiaki.Zip
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -oC:\DNXSoftware\Extras .\Chiaki4d\Chiaki4deck-win_x64-VC-1.4.1.Zip
 ren C:\DNXSoftware\Extras\Chiaki4deck-VC Chiaki4deck
