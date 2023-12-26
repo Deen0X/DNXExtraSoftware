@@ -57,7 +57,7 @@ echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
 
-wget -OSetup.exe %xDownload%
+wget --no-check-certificate -OSetup.exe %xDownload%
 start "%mySN:~4%" Setup.exe /S
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
