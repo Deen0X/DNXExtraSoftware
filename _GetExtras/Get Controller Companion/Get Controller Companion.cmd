@@ -58,9 +58,9 @@ echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
 echo wget -OSetup.exe %xDownload%
-wget -OSetup.exe %xDownload%
+wget --no-check-certificate -OSetup.exe %xDownload%
 Setup.exe /install /passive /norestart
-wget -OSetupCFG.exe %xDownloadCFG%
+wget --no-check-certificate -OSetupCFG.exe %xDownloadCFG%
 SetupCFG.exe /S
 staret "%mySN:~4%" "%checkEXTRA%"
 
