@@ -35,7 +35,7 @@ if not exist "C:\Windows\System32\wget.exe" (
 )
 
 set myF=C:\DNXSoftware\Extras\_GetExtras\
-set myZIP=%TEMP%\DNXWIN.zip
+set myZIP=%TEMP%\DNXEXTRASOFT.zip
 
 ::goto StartProcess
 
@@ -44,14 +44,13 @@ if "_%1"=="_/ENDUPDATE" goto StartProcess
 
 ::There is no parametres, then download and unpack file.
 :downloadAndUnpack
-::wget -O %temp%\UpdateExtras.cmd "https://raw.githubusercontent.com/Deen0X/DNXWIN/main/_GetExtras/UpdateExtras.cmd"
-rmdir /S /Q %Temp%\DNXWin-main
+rmdir /S /Q %Temp%\DNXExtraSoftware-main
 wget -O %myZIP% https://github.com/Deen0X/DNXExtraSoftware/archive/refs/heads/main.zip
 cd %temp%
 start "Unzip" /WAIT /MIN powershell -command "Expand-Archive '%MyZIP%' '%Temp%'"
 del "%MyZIP%"
 ::7z x -y %myZIP% * %Temp%
-cd "%TEMP%\DNXWin-main\_GetExtras"
+cd "%TEMP%\DNXExtraSoftware-main\_GetExtras"
 UpdateExtras.cmd /UPDATE %GENPARAM%
 goto endScript
 
@@ -59,7 +58,7 @@ goto endScript
 ::The file was downloaded and un packed
 ::Running this new instance of the script
 rmdir /S /Q "C:\DNXSoftware\Extras\_GetExtras" >nul
-xcopy /E /Y "%Temp%\DNXWin-main\_GetExtras" "C:\DNXSoftware\Extras\_GetExtras\" >nul
+xcopy /E /Y "%Temp%\DNXExtraSoftware-main\_GetExtras" "C:\DNXSoftware\Extras\_GetExtras\" >nul
 cd %myF%
 ren UpdateExtras.cmd "_Check for Updated Extras.cmd" >nul
 echo ============================================================================================================= Create Main Entry
