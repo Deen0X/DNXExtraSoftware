@@ -80,7 +80,7 @@ echo --------------------------------------------------------------------------
 echo press any key for continue installation.
 pause
 echo Start process for installing %mySN:~4%
-wget -Oaioruntime.exe http://static.updatestar.net/dl/allinone/aio-runtimes_v2.5.0.exe
+wget --no-check-certificate -Oaioruntime.exe http://static.updatestar.net/dl/allinone/aio-runtimes_v2.5.0.exe
 aioruntime.exe
 echo installed >"C:\DNXSoftware\ALLINONE_Runtimes.txt"
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
