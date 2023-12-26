@@ -49,27 +49,6 @@ goto endScript
 :getExtra
 echo --- getExtra
 
-::================================================================================================= Check for permissions
-:getAdminPriv
-::>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-::REM --> If error flag set, we do not have admin.
-::if '%errorlevel%' NEQ '0' (
-::    echo Requesting administrative privileges...
-::    goto UACPrompt
-::) else ( goto gotAdmin )
-::
-:::UACPrompt
-::    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\\getadmin.vbs"
-::    set params = %*:"="
-::    ::echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
-::    echo UAC.ShellExecute "cmd.exe", "/c  %~s0 %1 %2 %3", "", "runas", 1 >> "%temp%\\getadmin.vbs"
-::
-::    "%temp%\getadmin.vbs"
-::    del "%temp%\\getadmin.vbs"
-::    exit /B
-::::================================================================================================= end checking admin
-:::gotAdmin
-
 cls
 echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
@@ -80,10 +59,10 @@ echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
 
-::wget "%mySN:~4%" -O%auxNameExt% %xDownload%
+wget "%mySN:~4%" --no-check-certificate -O%auxNameExt% %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -OAuxExt %auxNameExt%
 start "%mySN:~4%" ".\AuxExt\%auxName%" /SP- /VERYSILENT
-PAUSE
+::PAUSE
 ::call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\%auxName%\%auxNameExt%" "C:\DNXSoftware\Extras\%auxName%" "%mySN:~4%" "/GETEXTRA" "C:\DNXSoftware\Extras\%auxName%\%auxNameExt%"
 ::move "C:\DNXSoftware\Extras\%auxName%\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
 
