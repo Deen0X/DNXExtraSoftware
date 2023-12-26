@@ -47,27 +47,6 @@ goto endScript
 :getExtra
 echo --- getExtra
 
-::================================================================================================= Check for permissions
-:getAdminPriv
-::>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-::REM --> If error flag set, we do not have admin.
-::if '%errorlevel%' NEQ '0' (
-::    echo Requesting administrative privileges...
-::    goto UACPrompt
-::) else ( goto gotAdmin )
-::
-:::UACPrompt
-::    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\\getadmin.vbs"
-::    set params = %*:"="
-::    ::echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
-::    echo UAC.ShellExecute "cmd.exe", "/c  %~s0 %1 %2 %3", "", "runas", 1 >> "%temp%\\getadmin.vbs"
-::
-::    "%temp%\getadmin.vbs"
-::    del "%temp%\\getadmin.vbs"
-::    exit /B
-::::================================================================================================= end checking admin
-:::gotAdmin
-
 cls
 echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
@@ -79,13 +58,9 @@ pause
 echo Start process for installing %mySN:~4%
 
 set myApp=SteamLink
-wget -O%myApp%.zip %xDownload%
+wget --no-check-certificate -O%myApp%.zip %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y %myApp%.Zip
 Setup.exe /quiet
-::copy "Get Chiaki Playstation Streaming.ico" "C:\DNXSoftware\Extras\Chiaki\Chiaki.ico"
-::call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\Chiaki\Chiaki.exe" "C:\DNXSoftware\Extras\Chiaki" "%mySN:~4%" "/GETEXTRA" "C:\DNXSoftware\Extras\Chiaki\Chiaki.ico"
-::move "C:\DNXSoftware\Extras\Chiaki\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
-
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
