@@ -77,7 +77,7 @@ echo Source      : %xSOURCE%
 echo --------------------------------------------------------------------------
 echo press any key to continue the installation. (close this windows for cancel)
 pause
-wget -OSetup.exe %xDownload%
+wget --no-check-certificate -OSetup.exe %xDownload%
 echo Start process for installing %mySN:~4%
 echo This may take a while... patience...
 mkdir "C:\Program Files\HWiNFO64\"
