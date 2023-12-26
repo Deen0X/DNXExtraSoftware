@@ -78,7 +78,8 @@ echo Source      : %xSOURCE%
 echo --------------------------------------------------------------------------
 echo press any key to continue the installation. (close this windows for cancel)
 pause
-wget -OSetup.msi %xDownload%
+
+wget --no-check-certificate -OSetup.msi %xDownload%
 echo Start process for installing %mySN:~4%
 Setup.msi /quiet
 echo Copying config
