@@ -6,7 +6,7 @@ setlocal enableextensions disabledelayedexpansion
 
 :: ALL scripts must start with "GET " text
 ::################################################################################################# Config variable for checking if Extra is installed
-set "checkEXTRA=1C:\Program Files\Winaero Tweaker\WinaeroTweaker.exe"
+set "checkEXTRA=C:\Program Files\Winaero Tweaker\WinaeroTweaker.exe"
 ::#################################################################################################
 set xDESCEXTRA= It is an all-in-one application that comes with dozens of options for fine-grained tuning of various Windows settings and features.
 ::#################################################################################################
@@ -65,7 +65,7 @@ start "%mySN:~4%" ".\AuxExt\%auxName%" /SP- /VERYSILENT
 ::PAUSE
 ::call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\%auxName%\%auxNameExt%" "C:\DNXSoftware\Extras\%auxName%" "%mySN:~4%" "/GETEXTRA" "C:\DNXSoftware\Extras\%auxName%\%auxNameExt%"
 ::move "C:\DNXSoftware\Extras\%auxName%\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
-
+start "WinAero Tweaker" "%checkEXTRA%"
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
