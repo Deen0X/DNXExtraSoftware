@@ -79,7 +79,7 @@ echo .
 echo Start process for installing %mySN:~4%
 echo Downloading Large File (2GB) and opening webpage...
 rundll32 url.dll,FileProtocolHandler https://telegra.ph/Manual-BOBwin-09-21
-wget -O%auxNameExt% "%xDownload%"
+wget --no-check-certificate -O%auxNameExt% "%xDownload%"
 C:\DNXSoftware\Extras\_GetExtras\7z x -pDNXBOBWIN -y -o%driveExtract% %auxNameExt%
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "%driveExtract%\BOBWIN_Lite\BOBWin.exe" "%driveExtract%\BOBWIN_Lite" "%mySN:~4%" "" "%driveExtract%\BOBWIN_Lite\BOBWin.exe"
 move "%driveExtract%\BOBWIN_Lite\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
