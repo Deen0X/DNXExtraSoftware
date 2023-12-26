@@ -59,7 +59,7 @@ echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
 
-wget "%mySN:~4%" --no-check-certificate -O%auxNameExt% %xDownload%
+wget --no-check-certificate -O%auxNameExt% %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -OAuxExt %auxNameExt%
 start "%mySN:~4%" ".\AuxExt\%auxName%" /SP- /VERYSILENT
 ::PAUSE
