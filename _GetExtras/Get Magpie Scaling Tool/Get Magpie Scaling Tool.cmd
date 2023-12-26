@@ -56,13 +56,8 @@ echo --------------------------------------------------------------------------
 echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
-::start /wait "Group Policy Editor Install" powershell.exe -ExecutionPolicy Bypass -File ".\Get Group Policy Editor.ps1"
 
-::dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >List.txt 
-::dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>List.txt 
-::for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i" 
-
-wget -OSetup.zip %xDownload%
+wget --no-check-certificate -OSetup.zip %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -oC:\DNXSoftware\Extras\Magpie Setup.zip
 del Setup.zip
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\Magpie\Magpie.exe" "C:\DNXSoftware\Extras\Magpie" "Magpie Windows Scaling Tool" "/GETEXTRA" "C:\DNXSoftware\Extras\Magpie\Magpie.exe"
