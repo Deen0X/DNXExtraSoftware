@@ -78,7 +78,7 @@ echo press any key to continue the installation. (close this windows for cancel)
 pause
 echo Start process for installing %mySN:~4%
 
-wget -OAutoWall.zip %xDownload%
+wget --no-check-certificate -OAutoWall.zip %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -oC:\DNXSoftware\Extras AutoWall.Zip
 ::copy "%mySN:~4%.ico" "C:\DNXSoftware\Extras\AutoWall\AutoWall.ico"
 call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\AutoWall\AutoWall.exe" "C:\DNXSoftware\Extras\AutoWall" "%mySN:~4%" "" "C:\DNXSoftware\Extras\AutoWall\AutoWall.exe"
