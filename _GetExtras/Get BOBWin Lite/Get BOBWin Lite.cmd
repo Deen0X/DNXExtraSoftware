@@ -59,7 +59,7 @@ echo Source      : %xSOURCE%
 echo --------------------------------------------------------------------------
 echo press any key to continue the installation. (close this windows for cancel)
 pause
-***********************
+echo ***********************
 echo .
 echo .
 echo .
