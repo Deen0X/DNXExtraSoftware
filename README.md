@@ -8,7 +8,7 @@ The goal of this script is to bring the menu for installing these software, and 
 
 ## How it works?
 
-Simply, download the [main script](blob:https://github.com/2a6f7847-99a2-41dd-82cc-e22804a02cfc) and run on your computer. This is a common CMD file, so you can check what is doing in all moment (all subscripts are CMD files too)
+Simply, download the [main script](https://github.com/Deen0X/DNXExtraSoftware/raw/main/_GetExtras/UpdateExtras.cmd) (Right click and save as) and run on your computer. This is a common CMD file, so you can check what is doing in all moment (all subscripts are CMD files too)
 
 You can see from where is downloading stuff, and what is doing after downloaded.
 
