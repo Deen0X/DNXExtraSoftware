@@ -56,22 +56,22 @@ Well, you can check the ["_GetExtras"](https://github.com/Deen0X/DNXExtraSoftwar
 
 Currently, there is a quick list of items included.
 
-- AllInOne Runtimes. A collection of DLLs, Frameworks, DirectX, components, etc for run software and games on windows.
-- AutoWall Live Wallpaper - A simple a lighweight program for Live Wallpapers
-- BOBWin Lite - A Lite version from BOBWin project, a Multi-Emulator platform.
-- Borderless Gaming - A Windows program that enable Fullscreen for Windowed applications.
-- Chiaki Playstation Streaming - An open source solution for streaming from PS4/PS5 to Windows.
-- Chiaki4Deck Playstation Streaming - The same as Chiaki but more updated and with optimizations for Steam Deck.
-- Chocolatey - This is a command line based store.
-- Controller Companion - Mainly used with old devices such GPD-WIN1/WIN2, for adding functionallity on desktop for gamepad, or remap controls.
-- GameSave Manager - Alternative for cloud based savegames outside of official launchers.
-- Gamestreaming Moonlight - Client for streaming for (original GeForce Experience) Sunshine Server
-- Gamestreaming Sunshine Server - Server part for streaming to Moonlight
-- Group Policy Editor - This enable Group Policy Editor on Windows Home editions
-- Handheld Companion - Software for some gaming devices that bring functionallity for gamepads. This will download a preconfigured setup.
-- Magpie Scaling Tool - All purpose window upsacler for Windows 10/11
-- Motion Assistant - Software for control TDP (auto), Gyro assign, etc. This runs most on GPD devices.
-- Snappy Driver Installer - Check for devices and offers updated drivers.
-- Steam Link - Streaming client for Steam. (Remote control)
-- Winaero Tweaker - Tweaks many aspects on windows. This can enable or disable some features such Microsoft Defender, etc.
-- Windows Subsystem for Android - Allow to run Android apps as native apps on windows 10/11
+- [AllInOne Runtimes](https://www.computerbase.de/downloads/systemtools/all-in-one-runtimes/) - A collection of DLLs, Frameworks, DirectX, components, etc for run software and games on windows.
+- [AutoWall Live Wallpaper](https://github.com/SegoCode/AutoWall/) - A simple a lighweight program for Live Wallpapers
+- [BOBWin Lite](https://telegra.ph/BOB-Win-Portable-07-26) - A Lite version from BOBWin project, a Multi-Emulator platform.
+- [Borderless Gaming](https://github.com/Codeusa/Borderless-Gaming) - A Windows program that enable Fullscreen for Windowed applications.
+- [Chiaki Playstation Streaming](https://git.sr.ht/~thestr4ng3r/chiaki) - An open source solution for streaming from PS4/PS5 to Windows.
+- [Chiaki4Deck Playstation Streaming](https://github.com/streetpea/chiaki4deck) - The same as Chiaki but more updated and with optimizations for Steam Deck.
+- [Chocolatey](https://gist.github.com/ScriptAutomate/02e0cf33786f869740ee963ed6a913c1) - This is a command line based store.
+- [Controller Companion](http://controllercompanion.com/) (Using old version previous get paid) - Mainly used with old devices such GPD-WIN1/WIN2, for adding functionallity on desktop for gamepad, or remap controls. This will download many pre-configured games (Thanks to Pochowandpoch)
+- [GameSave Manager](https://www.gamesave-manager.com/) - Alternative for cloud based savegames outside of official launchers.
+- [Gamestreaming Moonlight](https://github.com/moonlight-stream/moonlight-qt) - Client for streaming for (original GeForce Experience) Sunshine Server
+- [Gamestreaming Sunshine Server](https://github.com/LizardByte/Sunshine) - Server part for streaming to Moonlight
+- [Group Policy Editor](https://www.majorgeeks.com/content/page/enable_group_policy_editor_in_windows_10_home_edition.html) - This enable Group Policy Editor on Windows Home editions
+- [Handheld Companion](https://github.com/Valkirie/HandheldCompanion) - Software for some gaming devices that bring functionallity for gamepads. This will download a preconfigured setup.
+- [Magpie Scaling Tool](https://github.com/Blinue/Magpie) - All purpose window upsacler for Windows 10/11
+- [Motion Assistant](https://pan.baidu.com/s/1DTAAk3EmEj3crtxacR9MgA?pwd=0kix#list/path=%2Fsharelink3926352113-392076150813444%2F%E4%BD%93%E6%84%9F%E5%8A%A9%E6%89%8B&parentPath=%2Fsharelink3926352113-392076150813444) - Software for control TDP (auto), Gyro assign, etc. This runs most on GPD devices.
+- [Snappy Driver Installer](https://sdi-tool.org/download/) - Check for devices and offers updated drivers.
+- [Steam Link](https://store.steampowered.com/app/353380/Steam_Link/) - Streaming client for Steam. (Remote control)
+- [Winaero Tweaker](https://winaerotweaker.com/) - Tweaks many aspects on windows. This can enable or disable some features such Microsoft Defender, etc.
+- [Windows Subsystem for Android](https://github.com/MustardChef/WSABuilds) - Allow to run Android apps as native apps on windows 10/11
