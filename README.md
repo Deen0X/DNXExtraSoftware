@@ -1,12 +1,14 @@
 # EXTRA SOFTWARE Script
 
+![image](https://github.com/Deen0X/DNXExtraSoftware/assets/3720302/6635f8c7-92e2-44d6-8e3d-cd9f63f10cb4)
+
 ## What is this?
 
 Is a simple script (cmd) that bring a menu with some items that allow to user to install software (extra software) to their windows installation, in a simple ckick.
 Most of these software are common used on gaming related devices such GPD devices, Steam Deck, etc, and most of them come from github repositories, or another need some tweak/config after install.
 The goal of this script is to bring the menu for installing these software, and each subscript will download and config (if necessary) the software for quick usage.
 
-## How it works?
+## How it works? 
 
 Simply, download the [main script](https://github.com/Deen0X/DNXExtraSoftware/raw/main/_GetExtras/UpdateExtras.cmd) (Right click and save as) and run on your computer. This is a common CMD file, so you can check what is doing in all moment (all subscripts are CMD files too)
 
@@ -16,6 +18,16 @@ When you run the script, this will download this repository (DNXExtraSoftware) t
 menu.
 
 For each item, it will check if this is installed on your system. if installed, then will not add the item on the "_Extra Software" menu. if not installed, then will add the entry "Get [item]".
+
+As example, here are some items for install on the menu
+
+![image](https://github.com/Deen0X/DNXExtraSoftware/assets/3720302/807aaf74-406d-4b37-9604-73fd46a19082)
+
+and here is once Borderless Gaming was installed on the system
+
+![image](https://github.com/Deen0X/DNXExtraSoftware/assets/3720302/3e81aa13-dd79-4814-aecb-64f4c1158d36)
+
+As you can see the item "Get Borderless Gaming" dissapear from the menu.
 
 Take note that all these checks are so basic. if you donwnload a software previously and install on a custom path (not the default), then the script will not discover it, because is programmed to check a specific path for exist or not.
 
@@ -29,3 +41,10 @@ Of course, you don´t need all the software on your system. Install only what yo
 
 Simply run again the "_Check for updates Extras" entry on your "_Extra Software" menu. This will download all this project and completely refresh your directory for new items.
 
+![image](https://github.com/Deen0X/DNXExtraSoftware/assets/3720302/389ba847-ae8a-44b8-8feb-dce4336bb163)
+
+## when this will be updated?
+
+I will check for useful programs that maybe on this list. At first glance i don´t want to full this list of many programs. I want to add only things that i consider useful.
+
+I'm open to suggestions for adding new entries on this. You can comment on 
