@@ -61,7 +61,7 @@ echo Start process for installing %mySN:~4%
 
 wget --no-check-certificate -O%auxNameExt% %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -y -OAuxExt %auxNameExt%
-start "%mySN:~4%" ".\AuxExt\%auxName%" /SP- /VERYSILENT
+start "%mySN:~4%" /B /WAIT ".\AuxExt\%auxName%" /SP- /VERYSILENT
 ::PAUSE
 ::call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "C:\DNXSoftware\Extras\%auxName%\%auxNameExt%" "C:\DNXSoftware\Extras\%auxName%" "%mySN:~4%" "/GETEXTRA" "C:\DNXSoftware\Extras\%auxName%\%auxNameExt%"
 ::move "C:\DNXSoftware\Extras\%auxName%\%mySN:~4%.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\"
