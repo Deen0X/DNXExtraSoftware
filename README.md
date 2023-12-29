@@ -48,3 +48,30 @@ Simply run again the "_Check for updates Extras" entry on your "_Extra Software"
 I will check for useful programs that maybe on this list. At first glance i don´t want to full this list of many programs. I want to add only things that i consider useful.
 
 I'm open to suggestions for adding new entries on this. You can comment on 
+
+
+## Ok. but which software are included for install?
+
+Well, you can check the ["_GetExtras"](https://github.com/Deen0X/DNXExtraSoftware/tree/main/_GetExtras) folder and check it. Each subfolder = Item.
+
+Currently, there is a quick list of items included.
+
+- AllInOne Runtimes. A collection of DLLs, Frameworks, DirectX, components, etc for run software and games on windows.
+- AutoWall Live Wallpaper - A simple a lighweight program for Live Wallpapers
+- BOBWin Lite - A Lite version from BOBWin project, a Multi-Emulator platform.
+- Borderless Gaming - A Windows program that enable Fullscreen for Windowed applications.
+- Chiaki Playstation Streaming - An open source solution for streaming from PS4/PS5 to Windows.
+- Chiaki4Deck Playstation Streaming - The same as Chiaki but more updated and with optimizations for Steam Deck.
+- Chocolatey - This is a command line based store.
+- Controller Companion - Mainly used with old devices such GPD-WIN1/WIN2, for adding functionallity on desktop for gamepad, or remap controls.
+- GameSave Manager - Alternative for cloud based savegames outside of official launchers.
+- Gamestreaming Moonlight - Client for streaming for (original GeForce Experience) Sunshine Server
+- Gamestreaming Sunshine Server - Server part for streaming to Moonlight
+- Group Policy Editor - This enable Group Policy Editor on Windows Home editions
+- Handheld Companion - Software for some gaming devices that bring functionallity for gamepads. This will download a preconfigured setup.
+- Magpie Scaling Tool - All purpose window upsacler for Windows 10/11
+- Motion Assistant - Software for control TDP (auto), Gyro assign, etc. This runs most on GPD devices.
+- Snappy Driver Installer - Check for devices and offers updated drivers.
+- Steam Link - Streaming client for Steam. (Remote control)
+- Winaero Tweaker - Tweaks many aspects on windows. This can enable or disable some features such Microsoft Defender, etc.
+- Windows Subsystem for Android - Allow to run Android apps as native apps on windows 10/11
