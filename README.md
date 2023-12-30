@@ -50,6 +50,17 @@ I will check for useful programs that maybe on this list. At first glance i donÂ
 I'm open to suggestions for adding new entries on this. You can comment on 
 
 
+## Example of usage
+
+Check this video for get a general idea about how it works
+
+For this example, i installed Windwos Subsytem for Android (WSA) on a Windows Home installation
+
+https://youtu.be/ub_-b1yY9YU
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ub_-b1yY9YU/0.jpg)](https://www.youtube.com/watch?v=ub_-b1yY9YU)
+
+
 ## Ok. but which software are included for install?
 
 Well, you can check the ["_GetExtras"](https://github.com/Deen0X/DNXExtraSoftware/tree/main/_GetExtras) folder and check it. Each subfolder = Item.
