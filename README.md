@@ -58,7 +58,7 @@ For this example, i installed Windwos Subsytem for Android (WSA) on a Windows Ho
 
 https://youtu.be/ub_-b1yY9YU
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ub_-b1yY9YU/0.jpg)](https://www.youtube.com/watch?v=ub_-b1yY9YU)
+[![IMAGE ALT TEXT HERE](https://i9.ytimg.com/vi_webp/ub_-b1yY9YU/mq2.webp?sqp=CNST2qwG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGC0gZShRMA8=&rs=AOn4CLANnO-oFyhW49ol50HH3EEJ1cp5xw)](https://www.youtube.com/watch?v=ub_-b1yY9YU)
 
 
 ## Ok. but which software are included for install?
