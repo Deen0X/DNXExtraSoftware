@@ -12,7 +12,7 @@ set xDESCEXTRA=An open source project looking to help users of the Steam Deck ge
 ::#################################################################################################
 set xSOURCE=https://github.com/streetpea/chiaki4deck
 ::#################################################################################################
-set xDownload=https://github.com/streetpea/chiaki4deck/releases/download/v1.5.0/Chiaki4deck-win_x64-VC-Release.zip
+set xDownload=https://github.com/streetpea/chiaki4deck/releases/download/v1.6.0/Chiaki4deck-win_x64-MSYS2-Release.zip
 ::#################################################################################################
 
 if "_%1"=="_/GETEXTRA" goto getExtra
