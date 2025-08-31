@@ -6,7 +6,7 @@ setlocal enableextensions disabledelayedexpansion
 
 :: ALL scripts must start with "GET " text
 ::################################################################################################# Config variable for checking if Extra is installed
-set "checkEXTRA=C:\Windows\System32\gpedit.msc"
+set "checkEXTRA=C:\Windows\System32\gpedit1.msc"
 ::#################################################################################################
 set xDESCEXTRA=Group Policy come with Windows Pro editions. Windows Home must add this alternative to access the same items.
 ::#################################################################################################
@@ -98,5 +98,6 @@ goto endScript
 
 ::================================================================================================= End Script
 :endScript
+
 
 
