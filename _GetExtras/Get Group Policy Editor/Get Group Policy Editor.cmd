@@ -8,9 +8,10 @@ setlocal enableextensions disabledelayedexpansion
 ::################################################################################################# Config variable for checking if Extra is installed
 set "checkEXTRA=C:\Windows\System32\gpedit.msc"
 ::#################################################################################################
-set xDESCEXTRA=Chocolatey is a machine-level, command-line package manager and installer for software on Microsoft Windows. It uses the NuGet packaging infrastructure and Windows PowerShell to simplify the process of downloading and installing software.
+set xDESCEXTRA=Group Policy come with Windows Pro editions. Windows Home must add this alternative to access the same items.
 ::#################################################################################################
-set xSOURCE=https://www.majorgeeks.com/content/page/enable_group_policy_editor_in_windows_10_home_edition.html
+::set xSOURCE=https://www.majorgeeks.com/content/page/enable_group_policy_editor_in_windows_10_home_edition.html
+set xSOURCE=https://web.archive.org/web/20240127230146/https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
 ::#################################################################################################
 set xDownload1=https://gist.github.com/lelegard/8da0b20cc35708852c14fcf899651204
 set xDownload=https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
@@ -97,3 +98,4 @@ goto endScript
 
 ::================================================================================================= End Script
 :endScript
+
