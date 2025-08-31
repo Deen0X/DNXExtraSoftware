@@ -10,11 +10,11 @@ set "checkEXTRA=C:\Windows\System32\gpedit.msc"
 ::#################################################################################################
 set xDESCEXTRA=Group Policy come with Windows Pro editions. Windows Home must add this alternative to access the same items.
 ::#################################################################################################
-::set xSOURCE=https://www.majorgeeks.com/content/page/enable_group_policy_editor_in_windows_10_home_edition.html
-set xSOURCE=https://web.archive.org/web/20240127230146/https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
+set xSOURCE=https://www.majorgeeks.com/content/page/enable_group_policy_editor_in_windows_10_home_edition.html
 ::#################################################################################################
 set xDownload1=https://gist.github.com/lelegard/8da0b20cc35708852c14fcf899651204
-set xDownload=https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
+::set xDownload=https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
+set xDownload=https://web.archive.org/web/20240127230146/https://files1.majorgeeks.com/10afebdbffcd4742c81a3cb0f6ce4092156b4375/system/add_gpedit_msc.zip
 ::#################################################################################################
 
 if "_%1"=="_/ADDMENU" goto addEntry2
@@ -98,4 +98,5 @@ goto endScript
 
 ::================================================================================================= End Script
 :endScript
+
 
