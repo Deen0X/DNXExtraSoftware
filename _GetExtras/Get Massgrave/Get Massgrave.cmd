@@ -53,21 +53,10 @@ echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
 echo --------------------------------------------------------------------------
 echo press any key to continue the installation. (close this windows for cancel)
-pause
-
 
 mkdir "C:\DNXSoftware\Extras\Massgrave"
 echo powershell -Command "iex (curl.exe -s --doh-url https://1.1.1.1/dns-query https://get.activated.win | Out-String)">"%checkEXTRA%"
 start %checkEXTRA% 
-::echo Start process for installing %mySN:~4%
-::wget --no-check-certificate -Owsa.7z "https://github.com/MustardChef/WSABuilds/releases/download/Windows_10_2308.40000.3.0/WSA_2308.40000.3.0_x64_Release-Nightly-MindTheGapps-13.0-RemovedAmazon_Windows_10.7z"
-::C:\DNXSoftware\Extras\_GetExtras\7z x  -oC:\DNXSoftware\Extras wsa.7z
-::del wsa.7z
-::ren C:\DNXSoftware\Extras\WSA_2308.40000.3.0_x64 WSA
-::C:
-::cd C:\DNXSoftware\Extras\WSA\
-::start "WSA First Run" "C:\DNXSoftware\Extras\WSA\run.bat"
-
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
@@ -76,4 +65,5 @@ goto endScript
 
 
 ::================================================================================================= End Script
+
 :endScript
