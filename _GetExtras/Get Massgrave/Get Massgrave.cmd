@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 cd /d "%~dp0"
 pushd "%~dp0"
 set mySN=%~n0
@@ -72,6 +72,7 @@ goto endScript
 
 ::================================================================================================= End Script
 :endScript
+
 
 
 
