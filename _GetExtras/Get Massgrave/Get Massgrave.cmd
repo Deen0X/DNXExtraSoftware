@@ -13,7 +13,7 @@ set xDESCEXTRA=Microsoft Activation Scripts (MAS).
 ::#################################################################################################
 set xSOURCE=https://massgrave.dev/
 ::#################################################################################################
-set xDownload=.
+set xDownload=https://github.com/Deen0X/DNXWIN_ALTDOWNLOADS/tree/main/Massgrave
 
 if "_%1"=="_/GETEXTRA" goto getExtra
 if "_%1"=="_/ADDMENU" goto addEntry2
@@ -50,12 +50,18 @@ echo --- getExtra
 cls
 echo APP Name    : %mySN%
 echo Description : %xDESCEXTRA%
+echo .
+echo Source      : %xSOURCE%
 echo --------------------------------------------------------------------------
 echo press any key to continue the installation. (close this windows for cancel)
+pause
+echo Start process for installing %mySN:~4%
+echo wget -OMassgrave.7z %xDownload%
+wget --no-check-certificate -OMassgrave.7z %xDownload%
+C:\DNXSoftware\Extras\_GetExtras\7z x -pMassgrave.7z -y -o%driveExtract% %Massgrave%
+pause
+start "%mySN:~4%" "%checkEXTRA%"
 
-mkdir "C:\DNXSoftware\Extras\Massgrave"
-echo powershell -Command "iex (curl.exe -s --doh-url https://1.1.1.1/dns-query https://get.activated.win | Out-String)">"%checkEXTRA%"
-start %checkEXTRA% 
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
 echo %checkEXTRA%
@@ -64,6 +70,4 @@ goto endScript
 
 
 ::================================================================================================= End Script
-
 :endScript
-
