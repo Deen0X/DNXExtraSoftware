@@ -35,7 +35,6 @@ call "C:\DNXSoftware\Extras\_GetExtras\createlnk.cmd" "%~dpnx0" "%myP%" "%mySN%"
 cd %myP%
 if not exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\" mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\"
 move /Y "%~dpn0.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\_Extra Software\" >nul
-pause
 goto endScript
 
 ::------------------------------------------------------------------------------------------------- Remove Entry if exist
@@ -67,3 +66,4 @@ goto endScript
 ::================================================================================================= End Script
 
 :endScript
+
