@@ -13,7 +13,7 @@ set xDESCEXTRA=Microsoft Activation Scripts (MAS).
 ::#################################################################################################
 set xSOURCE=https://massgrave.dev/
 ::#################################################################################################
-set xDownload=https://github.com/Deen0X/DNXWIN_ALTDOWNLOADS/tree/main/Massgrave
+set xDownload=https://github.com/Deen0X/DNXWIN_ALTDOWNLOADS/blob/main/Massgrave/Massgrave.7z
 
 if "_%1"=="_/GETEXTRA" goto getExtra
 if "_%1"=="_/ADDMENU" goto addEntry2
@@ -71,4 +71,5 @@ goto endScript
 
 ::================================================================================================= End Script
 :endScript
+
 
