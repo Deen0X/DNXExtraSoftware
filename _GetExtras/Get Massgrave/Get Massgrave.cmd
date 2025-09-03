@@ -58,7 +58,8 @@ pause
 echo Start process for installing %mySN:~4%
 echo wget -OMassgrave.7z %xDownload%
 wget --no-check-certificate -OMassgrave.7z %xDownload%
-C:\DNXSoftware\Extras\_GetExtras\7z x -pMassgrave.7z -y -o"C:\DNXSoftware\Extras\Massgrave\" %Massgrave%
+C:\DNXSoftware\Extras\_GetExtras\7z x -pMassgrave.7z -y -o"C:\DNXSoftware\Extras" "*.*"
+copy "C:\DNXSoftware\Extras\Massgrave\Massgrave.lnk" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\Massgrave.lnk"
 pause
 start "%mySN:~4%" "%checkEXTRA%"
 
@@ -71,6 +72,7 @@ goto endScript
 
 ::================================================================================================= End Script
 :endScript
+
 
 
 
