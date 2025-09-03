@@ -60,7 +60,8 @@ echo wget -OMassgrave.7z %xDownload%
 wget --no-check-certificate -OMassgrave.7z %xDownload%
 C:\DNXSoftware\Extras\_GetExtras\7z x -pMassgrave.7z -y -o"C:\DNXSoftware\Extras" "*.*"
 copy "C:\DNXSoftware\Extras\Massgrave\Massgrave.lnk" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\Massgrave.lnk"
-start "%mySN:~4%" "%checkEXTRA%"
+::start "%mySN:~4%" "%checkEXTRA%"
+start "%mySN:~4%" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\_DNXSoftware\Massgrave.lnk"
 
 
 ::------------------------------------------------------------------------------------------------- Remove Entry Extra was installed
@@ -71,6 +72,7 @@ goto endScript
 
 ::================================================================================================= End Script
 :endScript
+
 
 
 
